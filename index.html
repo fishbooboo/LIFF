@@ -14,6 +14,7 @@
   <p id="language"><b>Language:</b> </p>
   <p id="version"><b>Version:</b> </p>
   <p id="isInClient"><b>isInClient:</b> </p>
+  <p id="id_token"><b>ID Token:</b> </p>
   <p id="accessToken"><b>AccessToken:</b> </p>
   <img id="pictureUrl">
   <p id="userId"><b>userId:</b> </p>
@@ -51,6 +52,8 @@
     function createUniversalLink() {
       const link1 = liff.permanentLink.createUrl()
       document.getElementById("universalLink1").append(link1)
+
+      
 
       liff.permanentLink.setExtraQueryParam('param=7')
       const link2 = liff.permanentLink.createUrl()
@@ -138,6 +141,7 @@
       document.getElementById("os").append(liff.getOS())
       document.getElementById("language").append(liff.getLanguage())
       document.getElementById("version").append(liff.getVersion())
+      document.getElementById("id_token").append(liff.id_token())
       document.getElementById("accessToken").append(liff.getAccessToken())
       document.getElementById("isInClient").append(liff.isInClient())
 
