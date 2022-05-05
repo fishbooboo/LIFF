@@ -51,7 +51,11 @@
   <script>
     function createUniversalLink() {
       const link1 = liff.permanentLink.createUrl()
-      document.getElementById("universalLink1").append(link1)
+	  
+	  const myArray = link1.split("?");
+	  let word = myArray[1];
+
+      document.getElementById("universalLink1").append(word)
 
       
 
